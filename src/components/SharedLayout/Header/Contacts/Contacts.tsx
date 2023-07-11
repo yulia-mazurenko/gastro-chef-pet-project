@@ -1,4 +1,7 @@
-import { PhoneLink, PhoneWrapper } from "./Contacts.styled";
+import {
+  PhoneLink,
+  PhoneWrapper,
+} from "../../../universalComponents/PhoneNumberBlock/PhoneNumberBlock.styled";
 
 export const Contacts: React.FC = () => {
   return (

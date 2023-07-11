@@ -1,4 +1,7 @@
-export const theme = {
+// my-theme.ts
+import { DefaultTheme } from "styled-components";
+
+const theme: DefaultTheme = {
   colors: {
     background: "#E5E5E5",
     backGroundMenu: "#DEE6EE",
@@ -11,13 +14,6 @@ export const theme = {
     validationRedText: "#F87676",
   },
   space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
-
-  // sizes: {
-  //   button: "120px",
-  //   form: "250px",
-  //   input: "250px",
-  //   wrapper: "350px",
-  // },
 
   fontSizes: {
     xs: "12px",
@@ -33,10 +29,7 @@ export const theme = {
     medium: 500,
     bold: 700,
   },
-  // lineHeights: {
-  //   body: 1.5,
-  //   heading: 1.125,
-  // },
+
   borders: {
     none: "none",
     normal: "1px solid",
@@ -52,4 +45,9 @@ export const theme = {
     normal: "0px 0px 30px rgba(86, 86, 86, 0.3)",
     accent: "0px 0px 40px rgba(86, 86, 86, 0.3)",
   },
+  effects: {
+    mainEffect: "450ms cubic-bezier(0.4, 0, 0.2, 1)",
+  },
 };
+
+export { theme };

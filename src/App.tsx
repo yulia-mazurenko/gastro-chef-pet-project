@@ -24,6 +24,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
+
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<MainPage />} />

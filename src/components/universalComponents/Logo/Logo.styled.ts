@@ -1,31 +1,48 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-import logoMobile from "../../../../assets/svg/logo/logo_mobile.svg";
-import logoDesktop from "../../../../assets/svg/logo/logo_desktop.svg";
+import logoMobile from "../../../assets/svg/logo/logo_mobile.svg";
+import logoDesktop from "../../../assets/svg/logo/logo_desktop.svg";
 
 export const WrapperLogo = styled.div`
-  position: absolute;
+  z-index: 1;
+  position: ${(p) => {
+    return p.type === "header" ? "absolute" : "static";
+  }};
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   @media screen and (min-width: 320px) {
     top: -25px;
-    left: 39px;
-    width: 138px;
-    height: 138px;
-    border-radius: 50%;
+    left: 15px;
+
+    width: ${(p) => {
+      return p.type === "header" ? "138px" : "299px";
+    }};
+
+    height: ${(p) => {
+      return p.type === "header" ? "138px" : "124px";
+    }};
+    border-radius: ${(p) => {
+      return p.type === "header" ? "50%" : 0;
+    }};
     background-color: ${(props) => props.theme.colors.whiteText};
+  }
+  @media screen and (min-width: 768px) {
+    left: 39px;
   }
   @media screen and (min-width: 1280px) {
     top: -60px;
     left: 10px;
-    width: 264px;
-    height: 264px;
-    border-radius: 50%;
-    background-color: ${(props) => props.theme.colors.whiteText};
+    width: ${(p) => {
+      return p.type === "header" ? "264px" : "422px";
+    }};
+    height: ${(p) => {
+      return p.type === "header" ? "264px" : "175px";
+    }};
   }
 `;
 
@@ -38,6 +55,27 @@ export const StyledLogoLink = styled(NavLink)`
     width: 165px;
     height: 69px;
   }
+
+  @media screen and (min-width: 768px) {
+    background-image: ${(p) => {
+      if (p.type !== "header") {
+        return `url(${logoDesktop})`;
+      }
+    }};
+
+    width: ${(p) => {
+      if (p.type !== "header") {
+        return "290px";
+      }
+    }};
+
+    height: ${(p) => {
+      if (p.type !== "header") {
+        return "120px";
+      }
+    }};
+  }
+
   @media screen and (min-width: 1280px) {
     background-image: url(${logoDesktop});
     width: 290px;

@@ -1,22 +1,56 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-export const StyledNav = styled.nav`
+export const StyledNavigation = styled.nav`
+  background-color: ${(p) => {
+    return p.type === "header"
+      ? "inherit"
+      : "${(props) => props.theme.colors.whiteText}";
+  }};
+`;
+
+export const StyledNavList = styled.ul`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-end;
 
   background-color: ${(props) => props.theme.colors.whiteText};
-  box-shadow: ${(props) => props.theme.shadows.accent};
 
   @media screen and (min-width: 320px) {
+    flex-direction: column;
+    width: 320px;
+    gap: 21px;
+    margin-bottom: ${(p) => {
+      return p.type === "header" ? "42px" : "0";
+    }};
+
+    padding: 20px 33px 0px 33px;
   }
   @media screen and (min-width: 768px) {
-    width: 410px;
-    gap: 25px;
-    padding: 10px 22px;
+    flex-direction: ${(p) => {
+      return p.type === "header" ? "row" : "column";
+    }};
+    align-items: center;
+    width: ${(p) => {
+      return p.type === "header" ? "410px" : "156px";
+    }};
+
+    gap: ${(p) => {
+      return p.type === "header" ? "25px" : "12px";
+    }};
+    padding: ${(p) => {
+      return p.type === "header" ? "10px 22px" : "0";
+    }};
+
     border-radius: 15px;
-    margin-right: 10px;
+    margin-right: ${(p) => {
+      return p.type === "header" ? "10px" : "0";
+    }};
+    box-shadow: ${(p) => {
+      return p.type === "header"
+        ? "${(props) => props.theme.shadows.accent}"
+        : "none";
+    }};
   }
   @media screen and (min-width: 1280px) {
     width: 700px;
@@ -27,25 +61,65 @@ export const StyledNav = styled.nav`
   }
 `;
 
+export const StyledListItem = styled.li`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
 export const StyledLink = styled(NavLink)`
-  font-family: MontserratRegular;
-  line-height: 1.33;
-  font-weight: ${(p) => p.theme.fontWeights.regular};
+  font-family: ${(p) => {
+    return p.type === "header" ? "MontserratRegular" : "ComfortaaRegular";
+  }};
+
+  line-height: ${(p) => {
+    return p.type === "header" ? "1.33" : "1.14";
+  }};
+
+  font-weight: ${(p) => {
+    if (p.type === "header") {
+      return p.theme.fontWeights.regular;
+    }
+    return p.theme.fontWeights.medium;
+  }};
+
   color: ${(p) => p.theme.colors.text};
 
   &.active {
     color: ${(p) => p.theme.colors.accentColor};
-    font-weight: ${(p) => p.theme.fontWeights.medium};
+    font-weight: ${(p) => p.theme.fontWeights.bold};
+  }
+  &:hover,
+  &:focus {
+    color: ${(p) => p.theme.colors.accentColor};
+    font-weight: ${(p) => p.theme.fontWeights.bold};
   }
 
-  @media screen and (min-width: 320px) {
+  @media screen and (max-width: 767px) {
+    font-family: ComfortaaBold;
+    font-style: normal;
+    font-weight: ${(p) => p.theme.fontWeights.bold};
+    font-size: ${(p) => p.theme.fontSizes.m};
+    line-height: 1.33;
+
+    text-align: center;
   }
 
   @media screen and (min-width: 768px) {
-    font-size: 8px;
+    font-size: ${(p) => {
+      if (p.type === "header") {
+        return "8px";
+      }
+      return p.theme.fontSizes.s;
+    }};
   }
 
   @media screen and (min-width: 1280px) {
-    font-size: ${(props) => props.theme.fontSizes.s};
+    font-size: ${(p) => {
+      if (p.type === "header") {
+        return p.theme.fontSizes.s;
+      }
+      return "20px";
+    }};
   }
 `;
