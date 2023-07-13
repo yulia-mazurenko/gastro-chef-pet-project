@@ -4,8 +4,9 @@ import styled from "styled-components";
 import logoMobile from "../../../assets/svg/logo/logo_mobile.svg";
 import logoDesktop from "../../../assets/svg/logo/logo_desktop.svg";
 import logoDesktopFooter from "../../../assets/svg/logo/logo_desktop_footer.svg";
+import { ITypeProps } from "../../../types/type";
 
-export const WrapperLogo = styled.div`
+export const WrapperLogo = styled.div<ITypeProps>`
   z-index: 1;
   position: ${(p) => {
     return p.type === "header" ? "absolute" : "static";
@@ -47,7 +48,7 @@ export const WrapperLogo = styled.div`
   }
 `;
 
-export const StyledLogoLink = styled(NavLink)`
+export const StyledLogoLink = styled(NavLink)<ITypeProps>`
   display: flex;
   flex-direction: column-reverse;
 
@@ -87,7 +88,7 @@ export const StyledLogoLink = styled(NavLink)`
   }
 `;
 
-export const LogoText = styled.p`
+export const LogoText = styled.p<ITypeProps>`
   margin-bottom: -3px;
   font-family: ComfortaaRegular;
   line-height: 1.16;

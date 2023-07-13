@@ -1,7 +1,9 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-export const StyledNavigation = styled.nav`
+import { ITypeProps } from "../../../../types/type";
+
+export const StyledNavigation = styled.nav<ITypeProps>`
   background-color: ${(p) => {
     return p.type === "header"
       ? "inherit"
@@ -9,7 +11,7 @@ export const StyledNavigation = styled.nav`
   }};
 `;
 
-export const StyledNavList = styled.ul`
+export const StyledNavList = styled.ul<ITypeProps>`
   display: flex;
   align-items: flex-start;
   justify-content: flex-end;
