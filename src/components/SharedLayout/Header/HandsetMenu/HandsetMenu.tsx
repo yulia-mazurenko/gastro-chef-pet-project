@@ -1,4 +1,4 @@
-import React, { ReactEventHandler } from "react";
+import React from "react";
 import { IProps } from "../../../../types/handsetMenu";
 // import { CloseButton } from "../../../universalComponents/CloseButton/CloseButton";
 import { PhoneLink } from "../../../universalComponents/PhoneNumberBlock/PhoneNumberBlock.styled";

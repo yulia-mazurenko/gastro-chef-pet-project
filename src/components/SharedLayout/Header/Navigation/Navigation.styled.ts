@@ -14,14 +14,14 @@ export const StyledNavList = styled.ul`
   align-items: flex-start;
   justify-content: flex-end;
 
-  background-color: ${(props) => props.theme.colors.whiteText};
+  background-color: ${(p) => p.theme.colors.whiteText};
 
   @media screen and (min-width: 320px) {
     flex-direction: column;
     width: 320px;
     gap: 21px;
     margin-bottom: ${(p) => {
-      return p.type === "header" ? "42px" : "0";
+      return p.type === "header" ? "42px" : "0px";
     }};
 
     padding: 20px 33px 0px 33px;
@@ -43,6 +43,7 @@ export const StyledNavList = styled.ul`
     }};
 
     border-radius: 15px;
+    margin-bottom: 0;
     margin-right: ${(p) => {
       return p.type === "header" ? "10px" : "0";
     }};
@@ -53,11 +54,20 @@ export const StyledNavList = styled.ul`
     }};
   }
   @media screen and (min-width: 1280px) {
-    width: 700px;
-    gap: 40px;
-    padding: 17px 33px;
+    width: ${(p) => {
+      return p.type === "header" ? "700px" : "220px";
+    }};
+
+    gap: ${(p) => (p.type === "header" ? "40px" : "17px")};
+
+    padding: ${(p) => {
+      return p.type === "header" ? "17px 33px" : "0";
+    }};
+
     border-radius: 26px;
-    margin-right: 20px;
+    margin-right: ${(p) => {
+      return p.type === "header" ? "20px" : "0";
+    }};
   }
 `;
 

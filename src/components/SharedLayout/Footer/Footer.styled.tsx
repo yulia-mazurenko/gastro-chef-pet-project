@@ -29,7 +29,7 @@ export const StyledFooterContainer = styled(Container)`
     justify-content: space-between;
   }
   @media screen and (min-width: 1280px) {
-    padding-top: 52px;
+    padding-top: 41px;
     padding-bottom: 44px;
   }
 `;
@@ -38,6 +38,7 @@ export const StyledInfoWrapper = styled.div`
   @media screen and (min-width: 768px) {
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
   }
 `;
 

@@ -5,7 +5,6 @@ import {
   StyledLink,
   StyledSocialItem,
   StyledTelegramIcon,
-  StyledViber,
   StyledViberIcon,
 } from "./Socials.styles";
 

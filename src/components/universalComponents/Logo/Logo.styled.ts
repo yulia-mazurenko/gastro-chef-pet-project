@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import logoMobile from "../../../assets/svg/logo/logo_mobile.svg";
 import logoDesktop from "../../../assets/svg/logo/logo_desktop.svg";
+import logoDesktopFooter from "../../../assets/svg/logo/logo_desktop_footer.svg";
 
 export const WrapperLogo = styled.div`
   z-index: 1;
@@ -77,9 +78,12 @@ export const StyledLogoLink = styled(NavLink)`
   }
 
   @media screen and (min-width: 1280px) {
-    background-image: url(${logoDesktop});
-    width: 290px;
-    height: 120px;
+    background-image: ${(p) =>
+      p.type === "header"
+        ? `url(${logoDesktop})`
+        : `url(${logoDesktopFooter})`};
+    width: ${(p) => (p.type === "header" ? "290px" : "422px")};
+    height: ${(p) => (p.type === "header" ? "120px" : "174px")};
   }
 `;
 
@@ -96,6 +100,6 @@ export const LogoText = styled.p`
   @media screen and (min-width: 768px) {
   }
   @media screen and (min-width: 1280px) {
-    font-size: ${(p) => p.theme.fontSizes.s};
+    font-size: ${(p) => (p.type === "header" ? p.theme.fontSizes.s : "20px")};
   }
 `;

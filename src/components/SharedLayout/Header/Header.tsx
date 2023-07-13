@@ -37,6 +37,7 @@ export const Header: React.FC = () => {
         )}
         {isMobile && (
           <MobileMenu
+            type="header"
             isMobileMenuOpen={isMobileMenuOpen}
             setIsMobileMenuOpen={setIsMobileMenuOpen}
           />

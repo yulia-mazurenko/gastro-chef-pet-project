@@ -1,10 +1,11 @@
 import { LogoText, StyledLogoLink, WrapperLogo } from "./Logo.styled.js";
+import { IProps } from "../../../types/Logo";
 
-export const Logo: React.FC = ({ text, type }) => {
+export const Logo: React.FC<IProps> = ({ text, type }) => {
   return (
     <WrapperLogo type={type}>
       <StyledLogoLink type={type} to="/">
-        <LogoText>{text}</LogoText>
+        <LogoText type={type}>{text}</LogoText>
       </StyledLogoLink>
     </WrapperLogo>
   );

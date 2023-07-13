@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useMediaQuery } from "react-responsive";
 
 import { Logo } from "../../universalComponents/Logo/Logo";
-import { PhoneLink } from "../../universalComponents/PhoneNumberBlock/PhoneNumberBlock.styled";
 import { Navigation } from "../Header/Navigation/Navigation";
 import { Faq } from "./Faq/Faq";
 import {
@@ -12,6 +11,7 @@ import {
   StyledPhoneLink,
 } from "./Footer.styled";
 import { Socials } from "./Socials/Socials";
+import { TermsCooperation } from "./TermsCooperation/TermsCooperation";
 
 export const Footer: React.FC = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
@@ -28,7 +28,9 @@ export const Footer: React.FC = () => {
         )}
         <Logo text="healthy food service" type="footer" />
         <StyledInfoWrapper>
+          {!isMobile && <TermsCooperation />}
           {!isMobile && <Faq />}
+
           <Socials />
           <StyledPhoneLink href="tel:+380689494919">
             +38 (068) 949 - 49 -19

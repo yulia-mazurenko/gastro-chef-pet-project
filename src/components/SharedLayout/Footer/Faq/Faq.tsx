@@ -1,3 +1,5 @@
+import { StyledText } from "./Faq.styled";
+
 export const Faq: React.FC = () => {
-  return <p>FAQ</p>;
+  return <StyledText>FAQ</StyledText>;
 };

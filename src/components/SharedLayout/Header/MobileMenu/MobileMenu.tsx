@@ -18,6 +18,7 @@ export const MobileMenu: React.FC<IProps> = ({
     <MobileMenuOverlay className={isMobileMenuOpen ? "active" : ""}>
       <NavigationAndContactsWrapper>
         <Navigation
+          type="header"
           setIsMobileMenuOpen={setIsMobileMenuOpen}
           isMobileMenuOpen={isMobileMenuOpen}
         />
