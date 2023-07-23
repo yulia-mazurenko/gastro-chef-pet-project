@@ -26,7 +26,7 @@ export const PhoneWrapper = styled.div`
       border-color: ${(p) => p.theme.colors.whiteText};
     }
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1920px) {
     width: 280px;
     height: 52px;
     border-radius: 26px;
@@ -55,9 +55,29 @@ export const PhoneLink = styled.a`
     &:hover,
     &:focus {
       color: ${(p) => p.theme.colors.whiteText};
+      background-color: ${(p) => {
+        if (p.type === "footer") {
+          return p.theme.colors.accentColor;
+        }
+      }};
+      border-color: ${(p) => {
+        if (p.type === "footer") {
+          return p.theme.colors.whiteText;
+        }
+      }};
+      border-radius: ${(p) => {
+        if (p.type === "footer") {
+          return "15px";
+        }
+      }};
+      border-width: ${(p) => {
+        if (p.type === "footer") {
+          return "1px";
+        }
+      }};
     }
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1920px) {
     font-size: 20px;
   }
 `;

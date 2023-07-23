@@ -16,9 +16,9 @@ export const Container = styled.div`
     width: 768px;
   }
 
-  @media screen and (min-width: 1280px) {
-    padding-left: 50px;
-    padding-right: 50px;
-    width: 1280px;
+  @media screen and (min-width: 1920px) {
+    padding-left: 370px;
+    padding-right: 370px;
+    width: 1920px;
   }
 `;

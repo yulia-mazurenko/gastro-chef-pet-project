@@ -1,6 +1,11 @@
 import styled from "styled-components";
 import { Container } from "../../universalComponents/Container/Container.styled";
 
+export const StyledHeader = styled.header`
+  z-index: 1;
+  position: relative;
+`;
+
 export const StyledHeaderContainer = styled(Container)`
   position: relative;
   display: flex;
@@ -14,7 +19,7 @@ export const StyledHeaderContainer = styled(Container)`
   @media screen and (min-width: 768px) {
     padding-top: 30px;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1920px) {
     padding-top: 52px;
   }
 `;

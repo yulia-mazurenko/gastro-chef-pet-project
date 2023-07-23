@@ -12,7 +12,7 @@ export const SocialsWrapper = styled.ul`
   gap: 10px;
   margin-bottom: 11px;
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1920px) {
     gap: 15px;
     margin-bottom: 15px;
   }
@@ -38,7 +38,7 @@ export const StyledSocialItem = styled.div`
     background-color: ${(p) => p.theme.colors.accentColor};
   }
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1920px) {
     width: 30px;
     height: 30px;
   }
@@ -48,7 +48,7 @@ export const StyledTelegramIcon = styled(TelegramIcon)`
   width: 12px;
   height: 12px;
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1920px) {
     width: 18px;
     height: 18px;
   }
@@ -58,7 +58,7 @@ export const StyledInstagramIcon = styled(InstagramIcon)`
   width: 12px;
   height: 12px;
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1920px) {
     width: 18px;
     height: 18px;
   }
@@ -68,7 +68,7 @@ export const StyledViberIcon = styled(ViberIcon)`
   width: 14px;
   height: 14px;
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1920px) {
     width: 20px;
     height: 20px;
   }
@@ -78,7 +78,7 @@ export const StyledFacebookIcon = styled(FacebookIcon)`
   width: 15px;
   height: 15px;
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1920px) {
     width: 20px;
     height: 20px;
   }

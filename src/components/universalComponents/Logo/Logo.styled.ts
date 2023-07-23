@@ -36,9 +36,9 @@ export const WrapperLogo = styled.div<ITypeProps>`
   @media screen and (min-width: 768px) {
     left: 39px;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1920px) {
     top: -60px;
-    left: 10px;
+    left: 315px;
     width: ${(p) => {
       return p.type === "header" ? "264px" : "422px";
     }};
@@ -78,7 +78,7 @@ export const StyledLogoLink = styled(NavLink)<ITypeProps>`
     }};
   }
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1920px) {
     background-image: ${(p) =>
       p.type === "header"
         ? `url(${logoDesktop})`
@@ -100,7 +100,7 @@ export const LogoText = styled.p<ITypeProps>`
   }
   @media screen and (min-width: 768px) {
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1920px) {
     font-size: ${(p) => (p.type === "header" ? p.theme.fontSizes.s : "20px")};
   }
 `;

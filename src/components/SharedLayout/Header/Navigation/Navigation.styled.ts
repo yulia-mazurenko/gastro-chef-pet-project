@@ -55,7 +55,7 @@ export const StyledNavList = styled.ul<ITypeProps>`
         : "none";
     }};
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1920px) {
     width: ${(p) => {
       return p.type === "header" ? "700px" : "220px";
     }};
@@ -98,7 +98,7 @@ export const StyledLink = styled(NavLink)`
   color: ${(p) => p.theme.colors.text};
 
   &.active {
-    color: ${(p) => p.theme.colors.accentColor};
+    color: ${(p) => p.theme.colors.activeColor};
     font-weight: ${(p) => p.theme.fontWeights.bold};
   }
   &:hover,
@@ -126,7 +126,7 @@ export const StyledLink = styled(NavLink)`
     }};
   }
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1920px) {
     font-size: ${(p) => {
       if (p.type === "header") {
         return p.theme.fontSizes.s;

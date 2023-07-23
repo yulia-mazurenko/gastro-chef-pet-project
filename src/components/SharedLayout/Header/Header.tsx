@@ -5,6 +5,7 @@ import { BurgerMenu } from "./BurgerMenu/BurgerMenu";
 import { Contacts } from "./Contacts/Contacts";
 import {
   NavigationAndContactsWrapper,
+  StyledHeader,
   StyledHeaderContainer,
 } from "./Header.styled";
 import { Logo } from "../../universalComponents/Logo/Logo";
@@ -16,7 +17,7 @@ export const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
 
   return (
-    <header>
+    <StyledHeader>
       <StyledHeaderContainer>
         <Logo text="healthy ration" type="header" />
         {!isMobile && (
@@ -43,6 +44,6 @@ export const Header: React.FC = () => {
           />
         )}
       </StyledHeaderContainer>
-    </header>
+    </StyledHeader>
   );
 };

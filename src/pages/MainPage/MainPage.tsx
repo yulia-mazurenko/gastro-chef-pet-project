@@ -1,5 +1,7 @@
+import { MainPageHero } from "../../components/MainPageComponents/MainPageHero/MainPageHero";
+
 const MainPage: React.FC = () => {
-  return <h1>MainPage</h1>;
+  return <MainPageHero />;
 };
 
 export default MainPage;

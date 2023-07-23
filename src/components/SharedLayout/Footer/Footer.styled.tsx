@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Container } from "../../universalComponents/Container/Container.styled";
 import { PhoneLink } from "../../universalComponents/PhoneNumberBlock/PhoneNumberBlock.styled";
+import { ITypeProps } from "../../../types/type";
 
 export const StyledFooter = styled.footer`
   background-color: ${(p) => p.theme.colors.whiteText};
@@ -28,7 +29,7 @@ export const StyledFooterContainer = styled(Container)`
     padding-bottom: 31px;
     justify-content: space-between;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1920px) {
     padding-top: 41px;
     padding-bottom: 44px;
   }
@@ -42,13 +43,13 @@ export const StyledInfoWrapper = styled.div`
   }
 `;
 
-export const StyledPhoneLink = styled(PhoneLink)`
+export const StyledPhoneLink = styled(PhoneLink)<ITypeProps>`
   color: ${(p) => p.theme.colors.accentColor};
-  /* 14 700 20 700 */
+
   @media screen and (min-width: 320px) {
     font-size: ${(p) => p.theme.fontSizes.s};
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1920px) {
     font-size: 20px;
   }
 `;

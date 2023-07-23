@@ -7,6 +7,7 @@ const theme: DefaultTheme = {
     backGroundMenu: "#DEE6EE",
     inputBackground: "#DEE6EE",
     accentColor: "#64D370",
+    activeColor: "#3D9646",
     attentionColor: "#F35353",
     text: "#020202",
     whiteText: "#F5FAFF",

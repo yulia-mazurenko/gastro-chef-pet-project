@@ -16,6 +16,7 @@ import { TermsCooperation } from "./TermsCooperation/TermsCooperation";
 export const Footer: React.FC = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
+
   return (
     <StyledFooter>
       <StyledFooterContainer>
@@ -32,7 +33,7 @@ export const Footer: React.FC = () => {
           {!isMobile && <Faq />}
 
           <Socials />
-          <StyledPhoneLink href="tel:+380689494919">
+          <StyledPhoneLink type="footer" href="tel:+380689494919">
             +38 (068) 949 - 49 -19
           </StyledPhoneLink>
         </StyledInfoWrapper>
