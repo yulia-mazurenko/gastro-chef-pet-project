@@ -7,7 +7,9 @@ import logoDesktopFooter from "../../../assets/svg/logo/logo_desktop_footer.svg"
 import { ITypeProps } from "../../../types/type";
 
 export const WrapperLogo = styled.div<ITypeProps>`
-  z-index: 1;
+  z-index: ${(p) => {
+    return p.type === "header" ? 1 : 0;
+  }};
   position: ${(p) => {
     return p.type === "header" ? "absolute" : "static";
   }};

@@ -2,6 +2,10 @@ import styled from "styled-components";
 
 export const MobileMenuOverlay = styled.div`
   z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+
   @media screen and (max-width: 767px) {
     width: 100vw;
     height: 100vh;

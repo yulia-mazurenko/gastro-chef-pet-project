@@ -10,14 +10,12 @@ export const StyledPageTitle = styled.h1`
   color: ${(p) => p.theme.colors.text};
 
   @media screen and (min-width: 768px) {
-    padding-top: 109px;
     margin-bottom: 0;
     width: 200px;
     font-size: ${(p) => p.theme.fontSizes.l};
   }
 
   @media screen and (min-width: 1920px) {
-    padding-top: 296px;
     font-size: 40px;
     width: 450px;
   }

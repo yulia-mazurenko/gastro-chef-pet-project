@@ -16,6 +16,8 @@ import desktopBGIAvocado from "../../../assets/images/desktop/main-page/hero-avo
 import desktopBGIAvocado2x from "../../../assets/images/desktop/main-page/hero-avocado-2x.png";
 
 export const StyledHeroSection = styled.section`
+  padding-bottom: 61px;
+
   @media screen and (min-width: 768px) {
     padding-bottom: 57px;
   }
@@ -29,14 +31,29 @@ export const MainPageHeroContainer = styled(Container)`
   flex-direction: column;
   align-items: flex-start;
 
-  @media screen and (min-width: 321px) and (max-width: 1919px) {
+  padding-left: 50px;
+  padding-top: 266px;
+
+  @media screen and (min-width: 768px) {
     padding-left: 129px;
+    padding-top: 109px;
+  }
+
+  @media screen and (min-width: 1920px) {
+    padding-top: 296px;
+    padding-left: 367px;
   }
 
   /* padding-right: 90px; */
 `;
 
 export const BgHeroSection = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 320px;
+  height: 266px;
+
   background-image: url("${mobileBGIHero}");
   background-size: cover;
   background-repeat: no-repeat;
@@ -86,6 +103,11 @@ export const BgHeroSection = styled.div`
 export const WrapperAvocadoImg = styled.div`
   z-index: 0;
   position: absolute;
+  top: 95px;
+  right: 55px;
+
+  width: 124px;
+  height: 124px;
 
   display: flex;
   align-items: center;
@@ -112,6 +134,9 @@ export const WrapperAvocadoImg = styled.div`
 `;
 
 export const HeroAvocadoImg = styled.div`
+  width: 114px;
+  height: 114px;
+
   background-image: url("${mobileBGIAvocado}");
   background-size: cover;
   border-radius: 50%;
@@ -184,6 +209,10 @@ export const StyledPartText = styled.span`
 `;
 
 export const PriceAboutText = styled.p`
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+
   font-family: MontserratRegular;
   font-size: 10px;
   font-weight: ${(p) => p.theme.fontWeights.regular};
@@ -191,31 +220,32 @@ export const PriceAboutText = styled.p`
   text-align: left;
   color: ${(p) => p.theme.colors.text};
   margin-top: 8px;
+  margin-bottom: 24px;
 
   @media screen and (min-width: 768px) {
+    gap: 2px;
     margin-top: 10px;
+    margin-bottom: 45px;
     font-size: ${(p) => p.theme.fontSizes.xs};
   }
 
   @media screen and (min-width: 1920px) {
     margin-top: 0;
+    gap: 0;
     font-size: 20px;
   }
 `;
 
-export const PriceText = styled.p`
+export const PriceText = styled.span`
   font-family: MontserratBold;
   font-size: ${(p) => p.theme.fontSizes.m};
   font-weight: ${(p) => p.theme.fontWeights.bold};
   line-height: 1;
   text-align: left;
   color: ${(p) => p.theme.colors.accentColor};
-  margin-top: 3px;
-  margin-bottom: 24px;
 
   @media screen and (min-width: 768px) {
     font-size: ${(p) => p.theme.fontSizes.l};
-    margin-bottom: 45px;
   }
 
   @media screen and (min-width: 1920px) {
@@ -224,6 +254,7 @@ export const PriceText = styled.p`
 `;
 
 export const ButtonPriceWrapper = styled.div`
+  text-align: left;
   @media screen and (min-width: 1920px) {
     display: flex;
     gap: 30px;
