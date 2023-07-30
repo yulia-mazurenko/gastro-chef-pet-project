@@ -1,4 +1,4 @@
-import{n as o,j as t,C as x}from"./index-f609859e.js";const m=o.button`
+import{n as o,j as t,C as x}from"./index-6889762d.js";const m=o.button`
   background-color: ${e=>e.background?e.background:e.theme.colors.accentColor};
   border: ${e=>e.theme.borders.bold};
 
@@ -34,7 +34,7 @@ import{n as o,j as t,C as x}from"./index-f609859e.js";const m=o.button`
 
     font-size: ${e=>e.theme.fontSizes.xl};
   }
-`,l=({onClick:e,background:n,bordercolor:i,color:d,hoverbackground:s,hovercolor:c,children:p})=>t.jsx(m,{onClick:e,background:n,bordercolor:i,color:d,hoverbackground:s,hovercolor:c,children:p}),h=o.h1`
+`,l=({onClick:e,background:i,bordercolor:n,color:d,hoverbackground:s,hovercolor:c,children:p})=>t.jsx(m,{onClick:e,background:i,bordercolor:n,color:d,hoverbackground:s,hovercolor:c,children:p}),h=o.h1`
   font-family: ComfortaaBold;
   font-size: ${e=>e.theme.fontSizes.m};
   font-weight: ${e=>e.theme.fontWeights.bold};
@@ -44,14 +44,12 @@ import{n as o,j as t,C as x}from"./index-f609859e.js";const m=o.button`
   color: ${e=>e.theme.colors.text};
 
   @media screen and (min-width: 768px) {
-    padding-top: 109px;
     margin-bottom: 0;
     width: 200px;
     font-size: ${e=>e.theme.fontSizes.l};
   }
 
   @media screen and (min-width: 1920px) {
-    padding-top: 296px;
     font-size: 40px;
     width: 450px;
   }
@@ -71,7 +69,7 @@ import{n as o,j as t,C as x}from"./index-f609859e.js";const m=o.button`
   @media screen and (min-width: 1920px) {
     font-size: 40px;
   }
-`,f=({text:e,accentText:n,secondText:i})=>t.jsx(t.Fragment,{children:t.jsxs(h,{children:[e,t.jsx(g,{children:n}),i]})}),b="/gastro-chef-pet-project/assets/pagination-dc904411.svg",u=o.div`
+`,f=({text:e,accentText:i,secondText:n})=>t.jsx(t.Fragment,{children:t.jsxs(h,{children:[e,t.jsx(g,{children:i}),n]})}),b="/gastro-chef-pet-project/assets/pagination-dc904411.svg",u=o.div`
   width: 156px;
   height: 14px;
 
@@ -80,7 +78,9 @@ import{n as o,j as t,C as x}from"./index-f609859e.js";const m=o.button`
   @media screen and (min-width: 1920px) {
     align-self: center;
   }
-`,w=()=>t.jsx(u,{}),$="/gastro-chef-pet-project/assets/bg-main-fa9c5429.png",v="/gastro-chef-pet-project/assets/bg-main-2x-aa452856.png",r="/gastro-chef-pet-project/assets/bg-main-3605527b.png",a="/gastro-chef-pet-project/assets/bg-main-2x-b0525eec.png",k="/gastro-chef-pet-project/assets/hero-avocado-c00d5a39.png",j="/gastro-chef-pet-project/assets/hero-avocado-2x-2e30bc03.png",z="/gastro-chef-pet-project/assets/hero-avocado-21d96c40.png",B="/gastro-chef-pet-project/assets/hero-avocado-2x-9032e47d.png",S="/gastro-chef-pet-project/assets/hero-avocado-050b1f80.png",y="/gastro-chef-pet-project/assets/hero-avocado-2x-40bc1874.png",P=o.section`
+`,w=()=>t.jsx(u,{}),$="/gastro-chef-pet-project/assets/bg-main-fa9c5429.png",v="/gastro-chef-pet-project/assets/bg-main-2x-aa452856.png",r="/gastro-chef-pet-project/assets/bg-main-3605527b.png",a="/gastro-chef-pet-project/assets/bg-main-2x-b0525eec.png",k="/gastro-chef-pet-project/assets/hero-avocado-c00d5a39.png",j="/gastro-chef-pet-project/assets/hero-avocado-2x-2e30bc03.png",z="/gastro-chef-pet-project/assets/hero-avocado-21d96c40.png",B="/gastro-chef-pet-project/assets/hero-avocado-2x-9032e47d.png",y="/gastro-chef-pet-project/assets/hero-avocado-050b1f80.png",S="/gastro-chef-pet-project/assets/hero-avocado-2x-40bc1874.png",P=o.section`
+  padding-bottom: 61px;
+
   @media screen and (min-width: 768px) {
     padding-bottom: 57px;
   }
@@ -92,12 +92,27 @@ import{n as o,j as t,C as x}from"./index-f609859e.js";const m=o.button`
   flex-direction: column;
   align-items: flex-start;
 
-  @media screen and (min-width: 321px) and (max-width: 1919px) {
+  padding-left: 50px;
+  padding-top: 266px;
+
+  @media screen and (min-width: 768px) {
     padding-left: 129px;
+    padding-top: 109px;
+  }
+
+  @media screen and (min-width: 1920px) {
+    padding-top: 296px;
+    padding-left: 367px;
   }
 
   /* padding-right: 90px; */
 `,T=o.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 320px;
+  height: 266px;
+
   background-image: url("${$}");
   background-size: cover;
   background-repeat: no-repeat;
@@ -145,6 +160,11 @@ import{n as o,j as t,C as x}from"./index-f609859e.js";const m=o.button`
 `,I=o.div`
   z-index: 0;
   position: absolute;
+  top: 95px;
+  right: 55px;
+
+  width: 124px;
+  height: 124px;
 
   display: flex;
   align-items: center;
@@ -169,6 +189,9 @@ import{n as o,j as t,C as x}from"./index-f609859e.js";const m=o.button`
     height: 700px;
   }
 `,A=o.div`
+  width: 114px;
+  height: 114px;
+
   background-image: url("${k}");
   background-size: cover;
   border-radius: 50%;
@@ -198,14 +221,14 @@ import{n as o,j as t,C as x}from"./index-f609859e.js";const m=o.button`
   @media screen and (min-width: 1920px) {
     width: 625px;
     height: 625px;
-    background-image: url("${S}");
+    background-image: url("${y}");
     background-repeat: no-repeat;
 
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
       (-webkit-min-device-pixel-ratio: 2),
       screen and (min-resolution: 2dppx) {
-      background-image: url(${y});
+      background-image: url(${S});
     }
   }
 `,G=o.p`
@@ -235,6 +258,10 @@ import{n as o,j as t,C as x}from"./index-f609859e.js";const m=o.button`
 `,H=o.span`
   color: ${e=>e.theme.colors.accentColor};
 `,M=o.p`
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+
   font-family: MontserratRegular;
   font-size: 10px;
   font-weight: ${e=>e.theme.fontWeights.regular};
@@ -242,35 +269,37 @@ import{n as o,j as t,C as x}from"./index-f609859e.js";const m=o.button`
   text-align: left;
   color: ${e=>e.theme.colors.text};
   margin-top: 8px;
+  margin-bottom: 24px;
 
   @media screen and (min-width: 768px) {
+    gap: 2px;
     margin-top: 10px;
+    margin-bottom: 45px;
     font-size: ${e=>e.theme.fontSizes.xs};
   }
 
   @media screen and (min-width: 1920px) {
     margin-top: 0;
+    gap: 0;
     font-size: 20px;
   }
-`,W=o.p`
+`,W=o.span`
   font-family: MontserratBold;
   font-size: ${e=>e.theme.fontSizes.m};
   font-weight: ${e=>e.theme.fontWeights.bold};
   line-height: 1;
   text-align: left;
   color: ${e=>e.theme.colors.accentColor};
-  margin-top: 3px;
-  margin-bottom: 24px;
 
   @media screen and (min-width: 768px) {
     font-size: ${e=>e.theme.fontSizes.l};
-    margin-bottom: 45px;
   }
 
   @media screen and (min-width: 1920px) {
     font-size: 35px;
   }
 `,R=o.div`
+  text-align: left;
   @media screen and (min-width: 1920px) {
     display: flex;
     gap: 30px;
